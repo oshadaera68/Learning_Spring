@@ -11,7 +11,9 @@ public class AppInit {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext c
                 = new AnnotationConfigApplicationContext(BeanConfig.class);
-        Vehicle mb = c.getBean("bmw", Vehicle.class);
+        Bmw mb = c.getBean("bmw", Bmw.class);
         System.out.println(mb.getSpeed());
+        System.out.println(mb.getCapacity());
+        System.out.println(mb.getCode());
     }
 }
